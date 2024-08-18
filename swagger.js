@@ -1,4 +1,4 @@
-/*const swaggerAutogen = require('swagger-autogen')();
+const swaggerAutogen = require('swagger-autogen')();
 
 const doc = {
   info: {
@@ -11,25 +11,7 @@ const doc = {
     'https'
   ],
   basePath: "/api",
-};
-
-const outputFile = './swagger_output.json';
-const endpointsFiles = ['./routes/*.js'];
-
-swaggerAutogen(outputFile, endpointsFiles, doc);
-*/
-const swaggerAutogen = require('swagger-autogen')();
-
-const doc = {
-    info: {
-        title: 'REST API',
-        description: 'REST API with Express and Firestore',
-        version: '1.0.0',
-    },
-    host: 'localhost:5500',  // Ajusta esto si estás en local o cambia al dominio en producción
-    schemes: ['http'],  // Cambia a https si es necesario
-    basePath: '/api',
-    securityDefinitions: {
+ securityDefinitions: {
         Bearer: {
             type: 'apiKey',
             name: 'Authorization',
@@ -42,8 +24,8 @@ const doc = {
    
     paths: {}
 };
-
 const outputFile = './swagger_output.json';
-const endpointsFiles = ['./routes/api.js'];
+const endpointsFiles = ['./routes/*.js'];
 
 swaggerAutogen(outputFile, endpointsFiles, doc);
+
