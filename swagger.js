@@ -6,7 +6,7 @@ const doc = {
     description: 'REST API with Express and Firestore',
     version: '1.0.0'
   },
-  host: 'restapis-ejym.onrender.com',  // Reemplaza <ID> con el ID real de tu servicio en Render
+  host: 'restapis-ejym.onrender.com',  
   schemes: [
     'https'
   ],
