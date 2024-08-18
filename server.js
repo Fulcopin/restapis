@@ -1,4 +1,4 @@
-require('dotenv').config();
+/*require('dotenv').config();
 
 const express = require('express');
 const bodyParser = require('body-parser');
@@ -23,4 +23,11 @@ app.use('/api', require('./routes/api'));
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
+*/
+const app = require('./app');  // Importa la aplicación Express desde app.js
 
+const PORT = process.env.PORT || 5500;
+
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
+});
